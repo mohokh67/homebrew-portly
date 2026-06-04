@@ -5,21 +5,21 @@
 class Portly < Formula
   desc "CLI for managing ports — list, inspect, and kill by port number"
   homepage "https://github.com/mohokh67/portly"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mohokh67/portly/releases/download/v0.2.3/portly_0.2.3_darwin_amd64.tar.gz"
-      sha256 "9118f6e4b84cd8530526226c8b2c81fa24c8d512e957bd12de033e9ee79d12d7"
+      url "https://github.com/mohokh67/portly/releases/download/v0.2.4/portly_0.2.4_darwin_amd64.tar.gz"
+      sha256 "c4de06c86516e8ed39dea9c307862d5fd772150b6a12c661647c46969a82bd0b"
 
       define_method(:install) do
         bin.install "portly"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mohokh67/portly/releases/download/v0.2.3/portly_0.2.3_darwin_arm64.tar.gz"
-      sha256 "a3fbcb111da76742eb7703716144ab0759a4aaa47105ff397cd7a91e44639136"
+      url "https://github.com/mohokh67/portly/releases/download/v0.2.4/portly_0.2.4_darwin_arm64.tar.gz"
+      sha256 "12bc21c01477d8d766e650e8abadfc270dc8337205ece6da41bdc7ad9b054dbd"
 
       define_method(:install) do
         bin.install "portly"
@@ -29,15 +29,15 @@ class Portly < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mohokh67/portly/releases/download/v0.2.3/portly_0.2.3_linux_amd64.tar.gz"
-      sha256 "a97dd8046e180e9ce053910001d940a9ebf9c3c8b0edd5c0d642569a5be114cc"
+      url "https://github.com/mohokh67/portly/releases/download/v0.2.4/portly_0.2.4_linux_amd64.tar.gz"
+      sha256 "fbff099975596583772b5b84a9bb4d1127dc8eaee141efa9e78261ded9940993"
       define_method(:install) do
         bin.install "portly"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mohokh67/portly/releases/download/v0.2.3/portly_0.2.3_linux_arm64.tar.gz"
-      sha256 "4a325c2c835b5a06b034e715308464179a3114ae93d780d56cdca5c56beb133e"
+      url "https://github.com/mohokh67/portly/releases/download/v0.2.4/portly_0.2.4_linux_arm64.tar.gz"
+      sha256 "bf5287081c66364fff7fd52e56eecdbb4df5f32fd6c3d688e4c8afb804ee56db"
       define_method(:install) do
         bin.install "portly"
       end
